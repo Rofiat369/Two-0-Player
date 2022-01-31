@@ -9,4 +9,19 @@ class Game
     @player_2
   end
 
+  def start_game
+    puts "Welcome to the TwO-O-Player PlayerA, what should we call you?"
+    @player_1 = Player.new(gets.chomp)
+
+    puts "And you PlayerB?"
+    @player_2 = Player.new(gets.chomp)
+
+    @current_player = @player_1
+    puts "Player 1 goes first."
+    puts "\n"
+
+    play while (@player_1.points > 0 && @player_2.points > 0)
+    end_game
+  end
+
 end
