@@ -10,10 +10,10 @@ class Game
   end
 
   def start_game
-    puts "Welcome to the TwO-O-Player PlayerA, what should we call you?"
+    puts "Welcome to the TwO-O-Player Player 1, what should we call you?"
     @player_1 = Player.new(gets.chomp)
 
-    puts "And you PlayerB?"
+    puts "And you Player 2?"
     @player_2 = Player.new(gets.chomp)
 
     @current_player = @player_1
@@ -33,7 +33,7 @@ class Game
   end
 
   def play
-    puts "~~~~~New Turn~~~~~"
+    puts "~~~~~New Game~~~~~"
     puts "\n"
     question = Question.new
     puts "#{@current_player.name}: #{question.num1} + #{question.num2} equals?"
@@ -53,5 +53,16 @@ class Game
     change_players
   end
 
+  def end_game
+    puts "~~~~~Game Over~~~~~"
+    puts "\n"
+    puts "#{@current_player.name} wins with a score of #{@current_player.points}/3"
+    puts "Play again? [Enter 'Y' to continue]"
+    if (gets.chomp == 'Y')
+      start_game
+    else
+      puts "See You Later!"
+    end
+  end
 
 end
