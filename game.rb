@@ -32,4 +32,26 @@ class Game
     end
   end
 
+  def play
+    puts "~~~~~New Turn~~~~~"
+    puts "\n"
+    question = Question.new
+    puts "#{@current_player.name}: #{question.num1} + #{question.num2} equals?"
+
+    player_answer = gets.chomp.to_i 
+    if(player_answer == question.answer)
+      puts "Nice, that's correct!"
+      puts "\n"
+    else
+      puts "Err, You don't know math..."
+      @current_player.points += -1
+      puts "\n"
+    end
+
+    puts "#{@player_1.name} - #{@player_1.life_points}/3 VS. #{@player_2.name} - #{@player_2.life_points}/3"
+
+    change_players
+  end
+
+
 end
