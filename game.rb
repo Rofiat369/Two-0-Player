@@ -1,7 +1,5 @@
 require './question.rb'
-require './player.rb'
-require './main.rb'
-
+require './players.rb'
 
 class Game
   def initialize
@@ -44,11 +42,11 @@ class Game
       puts "\n"
     else
       puts "Err, You don't know math..."
-      @current_player.points += -1
+      @current_player.points -= 1
       puts "\n"
     end
 
-    puts "#{@player_1.name} - #{@player_1.life_points}/3 VS. #{@player_2.name} - #{@player_2.life_points}/3"
+    puts "#{@player_1.name} - #{@player_1.points}/3 VS. #{@player_2.name} - #{@player_2.points}/3"
 
     change_players
   end
