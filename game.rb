@@ -24,4 +24,12 @@ class Game
     end_game
   end
 
+  def change_players
+    if (@current_player == @player_1)
+      @current_player = @player_2
+    else 
+      @current_player = @player_1
+    end
+  end
+
 end
