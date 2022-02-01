@@ -1,9 +1,7 @@
 game class (initialize players, start game, current_player = player 1, change players, end game)
-**suggestion for counter to check which checks which player is playing
+**suggestion for a counter that checks which player is playing
 ** if life of player is = 0 then other player won
-** 
 main class (import game, question and players). This is the entry point for ruby apps
 players class (name, lives)
 ** function that tracks the live of the player. decrement live of player
-
 question class (add random number) responsible for the question and answer
