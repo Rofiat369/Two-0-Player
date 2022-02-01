@@ -14,4 +14,4 @@ This game only runs in the command line interface. To run this app: open your co
 ruby main.rb
 ```
 
-[The output](https://github.com/Rofiat369/Two-0-Player/blob/master/docs/game.png)
+![The output](https://github.com/Rofiat369/Two-0-Player/blob/master/docs/game.png)
